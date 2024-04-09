@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+  /* position: absolute; */
+}
+
+header {
+  background-color: rgb(7, 94, 194);
+  color: white;
+  padding: 3px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: verdana;
+  font-size: 32px;
+  margin-left: 10px;
+}
+
+h4 {
+  border-radius: 50px;
+  background-color: rgb(7, 94, 194);
+  padding: 0 5px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
+}
+
+.container {
+  background-color: whitesmoke;
+  /* padding: 20px; */
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  min-height: 90vh;
+}
+
+.user-window {
+  padding: 5px 25px;
+  width: 350px;
+  background-color: rgb(16, 56, 71);
+  color: white;
+  /* border-radius: 15px; */
+  margin-right: 2px;
+  box-shadow: 3px 0px 0px 0px rgb(3, 13, 160);
+}
+
+
+@media screen and (max-width: 500px) {
+  .user-window {
+   width: 200px;
+  }
+}
+
+
+.user-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+p {
+  font-family: sans-serif;
+  /* font-size: 16px;   */
+  /* margin-bottom: 10px; */
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.chat-window {
+  background-color: rgba(35, 147, 211, 0.836);
+  width: 100%;
+  /* background: url("/bg.jpg"); */
+  /* background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center; */
+
+  /* border-radius: 15px; */
+}
+
+.search {
+  font-size: 0.9rem;
+  /* margin: 2px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+  height: 30px;
+  padding: 0 34px;
+  border: 1px solid var(--light);
+  border-radius: 21px;
+  font-weight: 400;
+}
+.chats {
+min-height: 75vh;
+  padding: 20px;
+  height: 65vh;
+ 
+ overflow-y: auto; 
+  /* margin-bottom: 20px;  */
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+} 
+.user-join{
+  font-size: 0.8rem;
+  /* color: rgba(35, 147, 211, 0.836); */
+  width: auto;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 1px 0px rgb(3, 13, 160);
+}
+
+
+.users-list div{
+  padding: 5px;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px white;
+  color: rgb(255, 255, 255);
+  /* background-color: white; */
+}
+
+.user-list-scrol {
+  min-height: 78%;
+  height: 70vh;
+  overflow-y: scroll;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.user-list-scrol::-webkit-scrollbar {
+  display: none;
+}
+
+.message {
+  color: rgb(82, 80, 80);
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.outgoing {
+  margin-left: auto;
+  color: white;
+  background-color: rgb(7, 94, 194);
+  border-radius: 5px 0px 20px 5px;
+}
+
+.incoming {
+  border-radius: 0px 5px 5px 20px;
+}
+
+.user-input {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+.emojionearea-button-close{
+  color: black;
+  background-color:skyblue
+
+}
+
+
+
+
+
+
+.input {
+  background-color: white;
+  padding: 16px 25px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 50px 0 0 50px;
+}
+
+.send-btn {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  letter-spacing: 0.5px;
+  background-color: rgba(35, 147, 211, 0.836);
+  color: white;
+  border-radius: 50px  ;
+  cursor: pointer;
+}
+
+.message-bottom {
+  padding: 0 50px;
+  position: relative;
+  top: 10px;
+}
+
+.fa {
+  padding: 1px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.input-group {
+  background-color: rgb(7, 94, 194);
+  position: relative;
+
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    width: 100%;
+  }
+}
+
+
+.emoji-button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 10px;
+  border: none;
+  outline: none;
+  letter-spacing: 0.5px;
+  /* background-color: rgba(35, 147, 211, 0.836); */
+  color: black;
+  background-color: white;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+}

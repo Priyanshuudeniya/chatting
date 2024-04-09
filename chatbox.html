@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUCHAT</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/chatbox.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">
+          <img src="/img/clock.png" width="50px" />
+          <h1>YOUCHAT</h1>
+        </div>
+
+        <button class="menu-btn" type="button" onclick="show_hide()">
+          <img src="/img/menu.png" width="50px" />
+        </button>
+      </header>
+      
+      <div class="container">
+        <div class="user-window">
+          
+          <!-- <div class="search-box">
+            <input class="search" type="text" placeholder="Search" />
+          </div> -->
+
+          <div class="user-head">
+            <h3>People</h3>
+            <h4 class="users-count">0</h4>
+          </div>
+
+          <div class="user-list-scrol">
+            <div class="users-list">
+             <!-- <div>No User</div> -->
+             <!-- <div>Deep</div> -->
+            </div>
+          </div>
+        </div>
+        <div class="chat-window">
+          <div class="chats">
+            <!-- <div class="user-join">
+              <p><b>Aman-</b> joined the chat</p>
+            </div> -->
+            <!-- <div class="message incoming">
+              <h5>Aman:</h5>
+              <p>Hello how are you</p>
+            </div>
+            <div class="message outgoing">
+              <h5>Deepansh:</h5>
+              <p>i'am good</p>
+            </div> -->
+          </div>
+    
+          <div class="input-group">
+            <!-- <div class="message-bottom">
+              <div class="bottom-icons">
+                <i class="fa fa-upload"></i>
+                <i class="fa fa-camera"></i>
+                <i class="fa fa-microphone"></i>
+              </div>
+            </div> -->
+
+            <div class="user-input">
+              <input
+              id="user-msg"
+                class="input"
+                type="text"
+                placeholder="Type your message..."
+
+              />
+              <button id="emoji-button" class="emoji-button">🙂</button>
+              <button type="button"  id="user-send" class="send-btn">SEND</button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </main>
+    <!-- <textarea  id="textarea" cols="30" rows="10"></textarea> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js1/client.js"></script>
+    <script src="/server.js"></script>
+    <script src="/public/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
+
+  <script>
+    
+const button = document.querySelector('#emoji-button');
+
+const picker = new EmojiButton();
+picker.on('emoji', emoji => {
+    document.querySelector('#user-msg').value += emoji;
+  });
+button.addEventListener('click', () => {
+  picker.togglePicker(button);
+});
+
+
+  </script>
+  </body>
+</html>
